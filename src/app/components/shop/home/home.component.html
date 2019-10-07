@@ -1,0 +1,22 @@
+<h1>שלום {{shop.nameShop}}</h1><br>
+<label >כתובת המייל </label><br>
+{{shop.mailShop}}<br>
+<label >שם החנות </label><br>
+{{shop.nameShop}}<br>
+<label >מיקום החנות </label><br>
+{{shop.addressString}}<br>
+<label >טלפון החנות</label><br>
+{{shop.phoneShop}}<br>
+<label >פתוח משעה</label><br>
+{{shop.fromHour}}<br>
+<label >עד שעה</label><br>
+{{shop.toHour}}<br>
+<label >הקטגוריות הנמכרות בחנות</label>
+<p *ngFor="let s of shop.Categories">
+  <li>{{s.nameCategory}}</li> 
+</p>
+<br>
+<br>
+<br>
+<br>
+<button class="btn btn-dark" (click)="onUpdate()">עדכן פרטי חנות</button>

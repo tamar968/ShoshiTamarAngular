@@ -1,0 +1,11 @@
+
+<h3>הקטגוריות בחנותך</h3>
+<ng-multiselect-dropdown
+  [placeholder]="'לחץ כדי לבחור קטגוריות'"
+  [data]="dropdownList"
+  [(ngModel)]="selectedCategories"
+  [settings]="dropdownSettings"
+  (onSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+>
+</ng-multiselect-dropdown>

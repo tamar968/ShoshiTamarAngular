@@ -1,0 +1,24 @@
+
+<form #f="ngForm" (ngSubmit)="onLogin()" class="form-signin container wrap">
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="mail">מייל</label>
+        </div>
+        <div class="col-sm-6">
+            <input #mail type="email" class="form-control" name="mail" [(ngModel)]="shop.mailShop"  placeholder="הקלד כתובת מייל" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-sm-6">
+          <label for="password">סיסמה</label>
+        </div>
+        <div class="col-sm-6">
+            <input #password type="password" class="form-control" name="password" [(ngModel)]="shop.passwordShop"
+            placeholder=" הקלד סיסמא " required>
+        </div>
+     </div>
+     
+        
+      <button class="btn btn-secondary" [disabled]="!f.form.valid">הכנס</button>
+
+</form>

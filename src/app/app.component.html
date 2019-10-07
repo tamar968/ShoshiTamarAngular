@@ -1,0 +1,14 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <a class="navbar-brand" href="">REMEMBER</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/signup']">הרשמה</a>
+        <a class="nav-item nav-link" [routerLink]="['/signin']">כניסה</a>
+        <a class="nav-item nav-link" [routerLink]="['/statistics']">סטטיסטיקה</a>
+        <a class="nav-item nav-link" [routerLink]="['/']" >בית</a>
+      </div>
+    </div>
+    <app-singout></app-singout>
+  </nav>
+  <router-outlet></router-outlet>

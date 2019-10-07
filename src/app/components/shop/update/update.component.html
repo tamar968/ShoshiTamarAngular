@@ -1,0 +1,80 @@
+<form #f="ngForm" (ngSubmit)="updateShop()" class="container wrap">
+    <div class="row">
+
+        <div class="col-sm-6">
+
+            <div class="row" margin-bottom="10px">
+                <div class="col-sm-6">
+                    <label for="name">שם</label>
+                </div>
+                <div class="col-sm-6">
+                    <input #name type="text" class="form-control" name="name" [(ngModel)]="shop.nameShop" placeholder="הקלד שם חנות"
+                        required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="mail">מייל</label>
+                </div>
+                <div class="col-sm-6">
+                    <input #mail type="email" class="form-control" name="mail" [(ngModel)]="shop.mailShop" placeholder="הקלד כתובת מייל"
+                        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="password">סיסמה</label>
+                </div>
+                <div class="col-sm-6">
+                    <input #password type="text" class="form-control" name="password" [(ngModel)]="shop.passwordShop"
+                        placeholder=" הקלד סיסמא " required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="phone">טלפון</label>
+                </div>
+                <div class="col-sm-6">
+                    <input #phone type="tel" class="form-control" name="phone" [(ngModel)]="shop.phoneShop" placeholder="הקלד טלפון חנות"
+                        minlength=9 maxlength=10>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="address">כתובת</label>
+                </div>
+                <div class="col-sm-6">
+                    <input #address type="text" class="form-control" name="addressToWork" [(ngModel)]="shop.addressString"
+                        placeholder="הקלד כתובת" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places"
+                        (onAddressChange)="addressToWork=handleAddressChange($event)">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="fromHour">פתוח משעה</label>
+                </div>
+                <div class="col-sm-6">
+                    <input #fromHour type="time" class="form-control" name="fromHour" [(ngModel)]="shop.fromHour"
+                        placeholder="פתוח משעה" pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="toHour">עד שעה</label>
+                </div>
+                <div class="col-sm-6">
+                    <input #toHour type="time" class="form-control" name="toHour" [(ngModel)]="shop.toHour" placeholder="עד שעה"
+                        pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <app-showcategory></app-showcategory>
+            <app-add-new-category></app-add-new-category>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-dark" [disabled]="!f.form.valid">עדכן</button>
+</form>

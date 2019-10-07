@@ -1,0 +1,4 @@
+<label for="newCategory">לא מוצא קטגוריה מתאימה?<br> שלח לנו אותה ואנחנו נוסיף אותה לרשימת
+    הקטגוריות</label>
+<input #newCategory type="text" class="form-control" name="newcategory" ><br>
+<button class="btn btn-secondary" type="button" [hidden]="!newCategory.value" (click)="onAddNewCategory(newCategory)">שלח</button>
