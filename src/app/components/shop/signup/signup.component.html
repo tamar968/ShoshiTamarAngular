@@ -1,80 +1,68 @@
-<form #f="ngForm" (ngSubmit)="newShop()" class="container wrap" name="myForm">
+<form #f="ngForm" (ngSubmit)="newShop(f.form.valid)" class="container wrap" [ngClass]="val" novalidate name="myForm">
     <div class="row">
 
-        <div class="col-sm-6" #div1>
+        <div class="col-6">
 
-            <div class="row" margin-bottom="10px" #div2>
-                <div class="col-sm-6">
-                    <label for="name">שם</label>
-                </div>
-                <div class="col-sm-6">
-                    <input #name type="text" class="form-control" name="name" [(ngModel)]="shop.nameShop" placeholder="הקלד שם חנות"
-                        required>
-                        <p class="text-danger" *ngIf="">הכנס שם</p>
-                </div>
+
+            <div class="form-group">
+                <label for="name">שם</label>
+                <input #name type="text" class="form-control" name="name" [(ngModel)]="shop.nameShop"
+                    placeholder="הקלד שם חנות" required>
+                <div class="valid-feedback">טוב</div>
+                <div class="invalid-feedback">נא מלא שדה זה</div>
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="mail">מייל</label>
-                </div>
-                <div class="col-sm-6">
-                    <input #mail type="email" class="form-control" name="mail" [(ngModel)]="shop.mailShop" placeholder="הקלד כתובת מייל"
-                        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                </div>
+            <div class="form-group">
+
+                <label for="mail">מייל</label>
+                <input #mail type="email" class="form-control" name="mail" [(ngModel)]="shop.mailShop"
+                    placeholder="הקלד כתובת מייל" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                <div class="valid-feedback">טוב</div>
+                <div class="invalid-feedback">הקלד כתובת מייל נכונה</div>
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="password">סיסמה</label>
-                </div>
-                <div class="col-sm-6">
-                    <input #password type="password" class="form-control" name="password" [(ngModel)]="shop.passwordShop"
-                        placeholder=" הקלד סיסמא " required>
-                </div>
+            <div class="form-group">
+                <label for="password">סיסמה</label>
+                <input #password type="password" class="form-control" name="password" [(ngModel)]="shop.passwordShop"
+                    placeholder=" הקלד סיסמא " required>
+                <div class="valid-feedback">טוב</div>
+                <div class="invalid-feedback">נא הקש סיסמה</div>
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="phone">טלפון</label>
-                </div>
-                <div class="col-sm-6">
-                    <input #phone type="tel" class="form-control" name="phone" [(ngModel)]="shop.phoneShop" placeholder="הקלד טלפון חנות"
-                        minlength=9 maxlength=10>
-                </div>
+            <div class="form-group">
+
+                <label for="phone">טלפון</label>
+                <input #phone type="tel" class="form-control" name="phone" [(ngModel)]="shop.phoneShop"
+                    placeholder="הקלד טלפון חנות" minlength=9 maxlength=10>
+                <div class="valid-feedback">טוב</div>
+                <div class="invalid-feedback">הקלד מספר טלפון</div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="address">כתובת</label>
-                </div>
-                <div class="col-sm-6">
-                    <input #address type="text" class="form-control" name="addressToWork" [(ngModel)]="addressToWork"
-                        placeholder="הקלד כתובת" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places"
-                        (onAddressChange)="addressToWork=handleAddressChange($event)" required>
-                </div>
+            <div class="form-group">
+                <label for="address">כתובת</label>
+                <input #address type="text" class="form-control" name="addressToWork" [(ngModel)]="addressToWork"
+                    placeholder="הקלד כתובת" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places"
+                    (onAddressChange)="addressToWork=handleAddressChange($event)" required>
+                <div class="valid-feedback">טוב</div>
+                <div class="invalid-feedback">נא הקלד כתובת</div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="fromHour">פתוח משעה</label>
-                </div>
-                <div class="col-sm-6">
-                    <input #fromHour type="time" class="form-control" name="fromHour" [(ngModel)]="shop.fromHour"
-                        pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
-                </div>
+            <div class="form-group">
+                <label for="fromHour">פתוח משעה</label>
+
+                <input #fromHour type="time" class="form-control" name="fromHour" [(ngModel)]="shop.fromHour"
+                    pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
+
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="toHour">עד שעה</label>
-                </div>
-                <div class="col-sm-6">
-                    <input #toHour type="time" class="form-control" name="toHour" [(ngModel)]="shop.toHour" pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
-                </div>
+            <div class="form-group">
+                <label for="toHour">עד שעה</label>
+                <input #toHour type="time" class="form-control" name="toHour" [(ngModel)]="shop.toHour"
+                    pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
+
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-6">
             <app-showcategory></app-showcategory>
             <app-add-new-category></app-add-new-category>
         </div>
     </div>
     <br>
-    <button class="btn btn-dark" [disabled]="!f.form.valid">הרשם</button>
+    <button class="btn btn-block btn-info" >הרשם</button>
 </form>

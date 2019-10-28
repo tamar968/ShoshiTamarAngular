@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Shop } from 'src/app/models/Shop';
-import {ShopsService} from 'src/app/services/shops.service';
+import { ShopsService } from 'src/app/services/shops.service';
 import { MyRoutingModule } from 'src/app/app.routing';
 import { Router } from '@angular/router';
 import { WebResult } from 'src/app/models/WebResult';
@@ -13,15 +13,20 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class SigninComponent implements OnInit {
   shop: Shop = new Shop();
+  val = "needs-validation";
 
-  constructor(private service: ShopsService,private router: Router,private toastr: ToastrService) { }
+  constructor(private service: ShopsService, private router: Router, private toastr: ToastrService) { }
   ngOnInit() {
-    
+
   }
 
-onLogin(){
-  this.service.onSignin(this.shop);
-}
+  onLogin(isValid: boolean) {
+
+    if (isValid)
+      this.service.onSignin(this.shop);
+    else
+      this.val = "was-validated";
+  }
   // onLogin(){
   //  this.service.onSignin(this.shop).subscribe((res: WebResult) => {
   //   console.log(res);
@@ -35,7 +40,7 @@ onLogin(){
   //   }  
   // });
   // }
-  onUpdate(){
+  onUpdate() {
     this.router.navigate(['/update'])
   }
 }

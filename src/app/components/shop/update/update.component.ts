@@ -18,6 +18,7 @@ export class UpdateComponent implements OnInit {
     componentRestrictions: { country: 'IL' }
   };
   checkAddress;
+  val = "needs-validation";
   shop: Shop = new Shop();
   constructor(private service: ShopsService, private router: Router, private toastr: ToastrService) {
     this.shop = this.service.shop;
@@ -42,17 +43,22 @@ export class UpdateComponent implements OnInit {
   }
 
 
-  updateShop() {
+  updateShop(isValid: boolean) {
 
-    this.service.onUpdate(this.shop).subscribe((res: WebResult) => {
-      if (res.Status == true) {
-        this.service.shop = res.Value;
-        this.toastr.success(res.Message);
-        this.router.navigate(['/home'])
-      }
-      else {
-        this.toastr.error(res.Message);
-      }
-    });
+    if (isValid) {
+      this.service.onUpdate(this.shop).subscribe((res: WebResult) => {
+        if (res.Status == true) {
+          this.service.shop = res.Value;
+          this.toastr.success(res.Message);
+          this.router.navigate(['/home'])
+        }
+        else {
+          this.toastr.error(res.Message);
+        }
+      });
+    }
+    else {
+      this.val = "was-validated";
+    }
   }
 }

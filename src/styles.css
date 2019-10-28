@@ -5,9 +5,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
   background-image:image("LOGO.jpeg");
 }
-input{
-    margin-bottom: 2vw;
-}
+
 .wrap{
     margin-top: 9vw;
 }
