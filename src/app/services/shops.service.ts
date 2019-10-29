@@ -31,7 +31,7 @@ export class ShopsService {
       var token = JSON.parse(res.Value.TokenJson)
       this.changeToken(token.access_token);
       localStorage.token = token.access_token;
-      this.shop = res.Value.shopDTO;
+      this.shop = res.Value.objectDTO;
       this.toastr.success(res.Message)
       this.router.navigate(['/home']);
     }
