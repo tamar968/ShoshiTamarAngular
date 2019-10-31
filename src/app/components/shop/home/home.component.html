@@ -1,22 +1,67 @@
-<h1>שלום {{shop.nameShop}}</h1><br>
-<label >כתובת המייל </label><br>
+<!-- <h1>שלום {{shop.nameShop}}</h1><br>
+<label>כתובת המייל </label><br>
 {{shop.mailShop}}<br>
-<label >שם החנות </label><br>
+<label>שם החנות </label><br>
 {{shop.nameShop}}<br>
-<label >מיקום החנות </label><br>
+<label>מיקום החנות </label><br>
 {{shop.addressString}}<br>
-<label >טלפון החנות</label><br>
+<label>טלפון החנות</label><br>
 {{shop.phoneShop}}<br>
-<label >פתוח משעה</label><br>
+<label>פתוח משעה</label><br>
 {{shop.fromHour}}<br>
-<label >עד שעה</label><br>
+<label>עד שעה</label><br>
 {{shop.toHour}}<br>
-<label >הקטגוריות הנמכרות בחנות</label>
+<label>הקטגוריות הנמכרות בחנות</label>
 <p *ngFor="let s of shop.Categories">
-  <li>{{s.nameCategory}}</li> 
-</p>
-<br>
-<br>
-<br>
-<br>
-<button class="btn btn-dark" (click)="onUpdate()">עדכן פרטי חנות</button>
+  <li>{{s.nameCategory}}</li>
+</p>-->
+
+
+<div class="container">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <div class="border border-info" style="padding: 20px">
+
+      <table class="table">
+        <tbody>
+          <tr><th colspan="2">{{shop.nameShop}} </th></tr>
+          <tr>
+            <td class="text-dark"><i class="fa fa-university"></i> כתובת מייל</td>
+            <td>{{shop.mailShop}}</td>
+          </tr>
+          <tr>
+            <td class="text-dark"><i class="fa fa-calendar"></i> שם החנות</td>
+            <td>{{shop.nameShop}}</td>
+          </tr>
+          <tr>
+            <td class="text-dark"><i class="fa fa-home"></i>מיקום החנות</td>
+            <td>{{shop.addressString}}</td>
+          </tr>
+          <tr>
+            <td class="text-dark"><i class="fa fa-calendar"></i> טלפון החנות</td>
+            <td>{{shop.phoneShop}}</td>
+          </tr>
+          <tr>
+            <td class="text-dark"><i class="fa fa-medkit"></i>זמן פתיחה</td>
+            <td>{{shop.fromHour}}</td>
+          </tr>
+          <tr>
+            <td class="text-dark"><i class="fa fa-thumbs-up"></i> זמן סגירה</td>
+            <td>{{shop.toHour}}</td>
+          </tr>
+          <tr>
+            <td class="text-dark"><i class="glyphicon glyphicon-time"></i>הקטגוריות הנמכרות בחנות</td>
+            <td>
+              <p *ngFor="let s of shop.Categories">
+                <li>{{s.nameCategory}}</li>
+              </p>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      <button  class="btn btn-block btn-dark" (click)="onUpdate()" >עדכן פרטי חנות</button>
+    </div>
+  </div>
+</div>
+
