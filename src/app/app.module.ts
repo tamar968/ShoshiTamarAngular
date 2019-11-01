@@ -19,6 +19,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { SingoutComponent } from './components/shop/singout/singout.component';
 import { AddNewCategoryComponent } from './components/category/add-new-category/add-new-category.component';
 import { StatisticsComponent } from './components/shop/statistics/statistics.component';
+import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { StatisticsComponent } from './components/shop/statistics/statistics.com
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule,
+    ChartModule,
     ToastrModule.forRoot(
       {
         positionClass: 'toast-top-center',

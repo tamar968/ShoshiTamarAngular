@@ -71,8 +71,8 @@ export class ShopsService {
     return this.myHttp.get(`${this.baseUrl}WebService/Shops/GetAllCategories`);
   }
 
-  getSearchesForShop(codeShop: number) {
-    return this.myHttp.get(`${this.baseUrl}WebService/Shops/GetSearches?codeShop=${codeShop}`, this.httpOptions);
+  getSearchesForShop(): Observable<Object>{
+    return this.myHttp.get(`${this.baseUrl}WebService/Shops/GetSearches`, this.httpOptions);
   }
 
   getCurrentShop() {
