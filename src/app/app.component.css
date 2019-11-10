@@ -1,0 +1,14 @@
+.i{
+    width: 180px;
+    height: 80px;
+    margin: 0px 10px 0px 10px;
+  }
+  .navbar navbar-expand-lg:hover { 
+    color: red ;
+}
+
+nav a.selected { 
+    color: red ;
+    border-bottom: 3px solid red;
+}
+

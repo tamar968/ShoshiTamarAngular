@@ -15,7 +15,7 @@ export class ShopsService {
   public shop: Shop;
   public categoriesForShop: Category[];
   httpOptions;
-  private baseUrl = 'http://localhost:55505/';
+  public baseUrl = 'http://localhost:55505/';
   constructor(private myHttp: HttpClient, private router: Router, private toastr: ToastrService) {
     this.getHttpOptions();
     this.getCurrentShop();
@@ -61,7 +61,7 @@ export class ShopsService {
         this.shop = null;
         this.resetToken();
         localStorage.token = null;
-        this.router.navigate(["/signin"]);
+        this.router.navigate(["/"]);
         this.toastr.success(res.Message)
       }
     });;

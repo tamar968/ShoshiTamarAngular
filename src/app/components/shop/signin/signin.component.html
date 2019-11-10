@@ -1,30 +1,28 @@
-<div class="container">
-    <div class="col-3"></div>
-    <div class="col-6">
-        <div class="border border-info" style="padding: 20px">
+<div class="container" >
+    <div class="col-5"></div>
+    <div class="col-7">
+        <div class="border border-danger" style="padding: 20px">
 
             <form #f="ngForm" (ngSubmit)="onLogin(f.form.valid)" class="form-signin container wrap" [ngClass]="val">
-                <h2>כניסה</h2>
-                <div class="form-group">
 
-                    <label for="mail">מייל</label>
+                <div class="form-group">
+                    <label for="mail" class="col-sm-2 col-form-label">מייל</label>
                     <input #mail type="email" class="form-control" name="mail" [(ngModel)]="shop.mailShop"
                         placeholder="הקלד כתובת מייל" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                     <div class="valid-feedback">טוב</div>
                     <div class="invalid-feedback">הקלד כתובת מייל נכונה</div>
                 </div>
                 <div class="form-group">
-                    <label for="password">סיסמה</label>
+                    <label for="password" class="col-sm-2 col-form-label">סיסמה</label>
                     <input #password type="password" class="form-control" name="password"
                         [(ngModel)]="shop.passwordShop" placeholder=" הקלד סיסמא " required>
                     <div class="valid-feedback">טוב</div>
                     <div class="invalid-feedback">נא הקש סיסמה</div>
                 </div>
-
-                <button class="btn btn-outline-primary" >הכנס</button>
-
+                <br>
+                <button class="btn btn-dark btn-lg btn-block">הכנס</button>
             </form>
         </div>
-        <div class="col-3"></div>
+        <div class="col-5"></div>
     </div>
 </div>

@@ -6,6 +6,8 @@ import { Shop } from 'src/app/models/Shop';
 import { WebResult } from 'src/app/models/WebResult';
 import { Category } from 'src/app/models/Category';
 import { ShowcategoryComponent } from '../../category/showcategory/showcategory.component';
+import { StatisticsComponent } from '../statistics/statistics.component';
+import { Local } from 'protractor/built/driverProviders';
 
 @Component({
   selector: 'app-update',
@@ -50,7 +52,8 @@ export class UpdateComponent implements OnInit {
         if (res.Status == true) {
           this.service.shop = res.Value;
           this.toastr.success(res.Message);
-          this.router.navigate(['/home'])
+          this.router.navigate(['/home']);
+         console.log( StatisticsComponent); 
         }
         else {
           this.toastr.error(res.Message);

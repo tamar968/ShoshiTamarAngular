@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   shop: Shop=new Shop();
   constructor(private shopSrv: ShopsService,private router: Router) {
     this.shop = this.shopSrv.shop;
+    console.log(this.shop);
     // this.shopSrv.shopChanges.subscribe((data) => {
     //   this.shop = data;
     // });

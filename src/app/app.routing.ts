@@ -7,12 +7,15 @@ import { SignupComponent } from './components/shop/signup/signup.component';
 import { ShopsGuard } from './shops.guard';
 import { UpdateComponent } from './components/shop/update/update.component';
 import { StatisticsComponent } from 'src/app/components/shop/statistics/statistics.component';
+import { LandingpageComponent } from './components/shop/landingpage/landingpage.component';
 
 const myAppRoutes: Routes = [
-    {path:'',component:HomeComponent,canActivate:[ShopsGuard]},
+    {path:'',component:LandingpageComponent},
     {path:'update',component:UpdateComponent,canActivate:[ShopsGuard]},
     {path:'signin',component:SigninComponent},
     {path:'signup',component:SignupComponent},
+    {path:'landinpage',component:LandingpageComponent},
+    {path:'home',component:HomeComponent,canActivate:[ShopsGuard]},
     {path:'statistics',component:StatisticsComponent,canActivate:[ShopsGuard]},
     {path:'**',redirectTo:''}
   ];

@@ -15,27 +15,26 @@ export class StatisticsComponent implements OnInit {
 
   searcehsForShop: SearchesForShop;
   rearange: ForStatics[] = [];
-  counter: number=0;
+  counter: number = 0;
 
   constructor(private service: ShopsService, private toastr: ToastrService) {
-    
+
   }
-  
+
 
 
   ngOnInit() {
     this.service.getSearchesForShop().subscribe((res: WebResult) => {
       if (res.Status == true) {
-        debugger;
         this.searcehsForShop = res.Value;
         //סופרים כמה הכל ביחד, כדי לדעת את האחוזים
-        for(let num of this.searcehsForShop.numbersCategories){
+        for (let num of this.searcehsForShop.numbersCategories) {
           this.counter += num;
         }
         for (let i = 0; i < this.searcehsForShop.namesCategories.length; i++) {
           let one = new ForStatics;
           one.name = this.searcehsForShop.namesCategories[i];
-          one.y = this.searcehsForShop.numbersCategories[i]*(100/this.counter);
+          one.y = this.searcehsForShop.numbersCategories[i] * (100 / this.counter);
           this.rearange.push(one);
         }
         var Highcharts = require('highcharts');

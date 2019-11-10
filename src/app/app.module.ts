@@ -20,6 +20,7 @@ import { SingoutComponent } from './components/shop/singout/singout.component';
 import { AddNewCategoryComponent } from './components/category/add-new-category/add-new-category.component';
 import { StatisticsComponent } from './components/shop/statistics/statistics.component';
 import { ChartModule } from 'angular-highcharts';
+import { LandingpageComponent } from './components/shop/landingpage/landingpage.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ChartModule } from 'angular-highcharts';
     UpdateComponent,
     SingoutComponent,
     AddNewCategoryComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,
