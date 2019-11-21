@@ -49,7 +49,7 @@ import { LandingpageComponent } from './components/shop/landingpage/landingpage.
         tapToDismiss: true,
         progressBar: true,
         progressAnimation: 'increasing',
-        maxOpened: 3,
+        maxOpened: 1,
         autoDismiss: true,
         preventDuplicates: true,
         resetTimeoutOnDuplicate: true,
