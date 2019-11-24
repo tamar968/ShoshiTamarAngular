@@ -49,21 +49,21 @@
 
                 <input #fromHour type="time" class="form-control" name="fromHour" [(ngModel)]="shop.fromHour"
                     pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
-                
+
             </div>
             <div class="form-group">
                 <label for="toHour">עד שעה</label>
                 <input #toHour type="time" class="form-control" name="toHour" [(ngModel)]="shop.toHour"
                     pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
-                
+
             </div>
         </div>
         <div class="col-6">
             <app-showcategory></app-showcategory>
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br>
             <app-add-new-category></app-add-new-category>
         </div>
     </div>
     <br>
-    <button class="btn btn-block btn-dark" >עדכן</button>
+    <button class="btn btn-block btn-dark">עדכן</button>
 </form>
-
