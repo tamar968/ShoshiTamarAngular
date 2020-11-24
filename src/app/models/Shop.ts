@@ -12,4 +12,5 @@ export class Shop{
     public toHour?:any;
     public addressString:string;
     public Categories:Category[];
+    public isFavorite = false;
 }

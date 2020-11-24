@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
     componentRestrictions: { country: 'IL' }
   };
   checkAddress;
+  addressToWork;
   val = "needs-validation";
 
   shop: Shop = new Shop();
@@ -44,6 +45,7 @@ export class SignupComponent implements OnInit {
       this.shop.latitude = address.geometry.location.lat();
       this.shop.longitude = address.geometry.location.lng();
       this.shop.addressString = address.formatted_address;
+
     }
     else {
       this.toastr.error('נדרש להקיש כתובת מורחבת');

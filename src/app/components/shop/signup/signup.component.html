@@ -41,7 +41,6 @@
                                 [(ngModel)]="addressToWork" placeholder="הקלד כתובת" ngx-google-places-autocomplete
                                 [options]='options' #placesRef="ngx-places"
                                 (onAddressChange)="addressToWork=handleAddressChange($event)" required>
-                            <div class="valid-feedback">טוב</div>
                             <div class="invalid-feedback">נא הקלד כתובת</div>
                         </div>
                         <div class="form-group">

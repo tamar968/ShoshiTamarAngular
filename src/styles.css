@@ -3,7 +3,7 @@
 body{
     direction: rtl ;
     font-family: Arial, Helvetica, sans-serif;
-  background-image:image("LOGO.jpeg");
+  /* background-image:image("LOGO.jpeg"); */
 }
 
 .wrap{
