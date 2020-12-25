@@ -17,6 +17,7 @@
     "@angular/compiler": "^6.1.0",
     "@angular/core": "^6.1.0",
     "@angular/forms": "^6.1.10",
+    "@angular/google-maps": "^11.0.1",
     "@angular/http": "^6.1.0",
     "@angular/material": "^8.0.2",
     "@angular/platform-browser": "^6.1.0",
@@ -29,7 +30,7 @@
     "highcharts": "^7.2.1",
     "ng-multiselect-dropdown": "^0.2.3",
     "ng2-google-place-autocomplete": "^1.4.2",
-    "ngx-google-places-autocomplete": "^2.0.4",
+    "ngx-google-places-autocomplete": "^2.0.5",
     "ngx-toastr": "^10.0.4",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
