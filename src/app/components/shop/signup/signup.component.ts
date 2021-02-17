@@ -31,6 +31,7 @@ export class SignupComponent implements OnInit {
 
 
   newShop(isValid:boolean) {
+    this.shop.addressString = "address";
     if (isValid) {
       this.service.onShopAdded(this.shop);
     }
@@ -45,6 +46,7 @@ export class SignupComponent implements OnInit {
       this.shop.latitude = address.geometry.location.lat();
       this.shop.longitude = address.geometry.location.lng();
       this.shop.addressString = address.formatted_address;
+      this.shop.addressString = "address";
 
     }
     else {
