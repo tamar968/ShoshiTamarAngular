@@ -46,7 +46,7 @@ export class SignupComponent implements OnInit {
       this.shop.latitude = address.geometry.location.lat();
       this.shop.longitude = address.geometry.location.lng();
       this.shop.addressString = address.formatted_address;
-      this.shop.addressString = "address";
+      // this.shop.addressString = "address";
 
     }
     else {
