@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
 
 
   newShop(isValid:boolean) {
-    this.shop.addressString = "address";
+  //  this.shop.addressString = "address";
     if (isValid) {
       this.service.onShopAdded(this.shop);
     }
