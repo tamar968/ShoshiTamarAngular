@@ -1,3 +1,5 @@
-<!-- <button type="button" class="btn btn-secondary" [hidden]="!service.shop" (click)="onSingout()" >התנתק</button> -->
-<img class="i"  [hidden]="!service.shop" (click)="onSingout()"
-        src="../../../../assets/images/logout.png">
+<ng-container *ngIf="service.shop">
+  <span class="btn from-right" (click)="onSingout()">
+          התנתק
+        </span>
+</ng-container>

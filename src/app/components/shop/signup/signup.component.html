@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-5"></div>
     <div class="col-12">
-        <div class="border border-danger" style="padding: 20px">
+        <div class="border " style="padding: 20px">
             <form #f="ngForm" (ngSubmit)="newShop(f.form.valid)" class="container wrap" [ngClass]="val" novalidate
                 name="myForm">
                 <div class="row">
@@ -62,6 +62,10 @@
                 </div>
                 <br>
                 <button class="btn btn-block btn-dark">הרשם</button>
+                <a class="nav-item nav-link" [routerLinkActive]="['selected']" [routerLink]="['/signin']">
+                    <!-- <img class="i" src="../assets/images/signup.png"> -->
+                    <span>כניסה</span>
+                  </a>
             </form>
         </div>
 

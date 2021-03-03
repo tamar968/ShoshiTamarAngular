@@ -1,18 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
 
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-root{
+/* root{
   --my-primary:#002060;
-}
+} */
+
 body{
+  --my-primary:#3880ff;
     direction: rtl ;
     font-family: Arial, Helvetica, sans-serif;
   /* background-image:image("LOGO.jpeg"); */
+  background-color: #556080;
+  color:white !important;
 }
 
-.wrap{
-    margin-top: 9vw;
+table{
+  color: #f8f9fa !important;
 }
+
 .bg-primary{
-  background-color: #002060 !important;
+  background-color:#3880ff !important;
+}
+.btn{
+  background-color:var(--my-primary); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn {
+  font-weight: 500;
+  background: #3697eb;
+  color: #fff ;
+  border-color: #3697eb;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
+}
+
+.btn {
+  font-size: 16px;
+  border-width: 2px;
+  border-radius: 4px;
+  text-shadow: none !important;
+  padding: 8px 16px !important;
+}
+.btn:hover, .btn.focus, .btn:focus {
+  background: none;
+  color: #3697eb;
 }

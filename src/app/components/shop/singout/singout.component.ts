@@ -14,6 +14,7 @@ export class SingoutComponent implements OnInit {
   constructor(public service: ShopsService, private router: Router, private toastr: ToastrService) {
   }
 
+  
   ngOnInit() {
 
   }

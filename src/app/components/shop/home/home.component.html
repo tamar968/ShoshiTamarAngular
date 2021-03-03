@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-6">
-      <div class="border border-danger" style="padding: 20px">
+      <div class="border border-primary" style="padding: 20px">
 
         <table class="table">
           <tbody>
@@ -9,31 +9,31 @@
               <th colspan="2">{{shop.nameShop}} </th>
             </tr>
             <tr>
-              <td class="text-dark"><i class="fa fa-university"></i> כתובת מייל</td>
+              <td class="text-light"><i class="fa fa-university"></i> כתובת מייל</td>
               <td>{{shop.mailShop}}</td>
             </tr>
             <tr>
-              <td class="text-dark"><i class="fa fa-calendar"></i> שם החנות</td>
+              <td class="text-light"><i class="fa fa-calendar"></i> שם החנות</td>
               <td>{{shop.nameShop}}</td>
             </tr>
             <tr>
-              <td class="text-dark"><i class="fa fa-home"></i>מיקום החנות</td>
+              <td class="text-light"><i class="fa fa-home"></i>מיקום החנות</td>
               <td>{{shop.addressString}}</td>
             </tr>
             <tr>
-              <td class="text-dark"><i class="fa fa-calendar"></i> טלפון החנות</td>
+              <td class="text-light"><i class="fa fa-calendar"></i> טלפון החנות</td>
               <td>{{shop.phoneShop}}</td>
             </tr>
             <tr>
-              <td class="text-dark"><i class="fa fa-medkit"></i>זמן פתיחה</td>
+              <td class="text-light"><i class="fa fa-medkit"></i>זמן פתיחה</td>
               <td>{{shop.fromHour}}</td>
             </tr>
             <tr>
-              <td class="text-dark"><i class="fa fa-thumbs-up"></i> זמן סגירה</td>
+              <td class="text-light"><i class="fa fa-thumbs-up"></i> זמן סגירה</td>
               <td>{{shop.toHour}}</td>
             </tr>
             <tr>
-              <td class="text-dark"><i class="glyphicon glyphicon-time"></i>הקטגוריות הנמכרות בחנות</td>
+              <td class="text-light"><i class="glyphicon glyphicon-time"></i>הקטגוריות הנמכרות בחנות</td>
               <td>
                 <p *ngFor="let s of shop.Categories">
                   <li>{{s.nameCategory}}</li>

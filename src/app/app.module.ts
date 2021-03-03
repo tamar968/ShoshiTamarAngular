@@ -61,7 +61,9 @@ import { LandingpageComponent } from './components/shop/landingpage/landingpage.
     AgmCoreModule.forRoot({
      // apiKey: 'AIzaSyBqxfCJBBZXu7ih3wu0fKh4Adt0-LxEbGU' 
      //apiKey: 'AIzaSyB6XGmiIhsaoXzLTu611HLGNL74ZEWIaSE'
-     apiKey: 'AIzaSyDxG3TDFOXmRB5XpG9Yfh40VCs5Aqr93jo'
+     //apiKey: 'AIzaSyDxG3TDFOXmRB5XpG9Yfh40VCs5Aqr93jo'
+     apiKey: 'AIzaSyBTXAUv1-yJ3JQRPaHuDN8H5NuS2SM0Quc'
+    //  apiKey: 'AIzaSyBHjD1ZZO5w9LmCuOjejbHiQq8Lkd94qSk'
     }),
     NgMultiSelectDropDownModule.forRoot(),
     GooglePlaceModule,

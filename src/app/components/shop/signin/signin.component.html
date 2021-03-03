@@ -1,7 +1,7 @@
 <div class="container" >
     <div class="col-5"></div>
     <div class="col-7">
-        <div class="border border-danger" style="padding: 20px">
+        <div class="border border-primary" style="padding: 20px">
 
             <form #f="ngForm" (ngSubmit)="onLogin(f.form.valid)" class="form-signin container wrap" [ngClass]="val">
 
@@ -21,6 +21,10 @@
                 </div>
                 <br>
                 <button class="btn btn-dark btn-lg btn-block">הכנס</button>
+                <a class="nav-item nav-link" [routerLinkActive]="['selected']" [routerLink]="['/signup']">
+                    <!-- <img class="i" src="../assets/images/signup.png"> -->
+                    <span>רישום</span>
+                  </a>
             </form>
         </div>
         <div class="col-5"></div>

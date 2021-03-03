@@ -1,23 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
-  <a class="navbar-brand" href="">
-    <img class="i" src="../assets/images/logo.PNG">
-  </a>
-  <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" [routerLinkActive]="['selected']" [routerLink]="['/signup']">
-        <img class="i" src="../assets/images/signup.png">
-      </a>
-      <a class="nav-item nav-link" [routerLinkActive]="['selected']" [routerLink]="['/signin']">
-        <img class="i" src="../assets/images/signin.png">
-      </a>
-      <a class="nav-item nav-link" [routerLinkActive]="['selected']" [routerLink]="['/home']">
-        <img class="i" src="../assets/images/home.png">
-      </a>
-    </div>
-  </div>
+<div class="d-flex flex-column" style="max-width: 100px;align-items: center;">
+  <img  src="../assets/images/364-user.png" style="width: 60px;">
+  <ng-container *ngIf="!service.shop">
+    <a class="btn from-right" [hidden]="service.shop" [routerLinkActive]="['selected']" [routerLink]="['/signup']">
+      <span>רישום</span>
+    </a>
+  </ng-container>
   <app-singout></app-singout>
-</nav>
-
-<div style="margin-top: 10vh !important">
+</div>
+<div style="margin-top: 30px !important">
   <router-outlet></router-outlet>
 </div>
