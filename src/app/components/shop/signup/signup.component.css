@@ -1,3 +1,7 @@
 label, input{
     text-align: right;
 }
+.mandatory::after{
+    content: '*';
+    color: red;
+}

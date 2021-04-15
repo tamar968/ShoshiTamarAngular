@@ -31,7 +31,6 @@ export class SignupComponent implements OnInit {
 
 
   newShop(isValid:boolean) {
-  //  this.shop.addressString = "address";
     if (isValid) {
       this.service.onShopAdded(this.shop);
     }
@@ -42,15 +41,14 @@ export class SignupComponent implements OnInit {
 
   handleAddressChange(address) {
     this.checkAddress = false;
-    if (address.address_components.length > 4) {
+    if (address.address_components.length > 1) {
       this.shop.latitude = address.geometry.location.lat();
       this.shop.longitude = address.geometry.location.lng();
       this.shop.addressString = address.formatted_address;
-      // this.shop.addressString = "address";
 
     }
     else {
-      this.toastr.error('נדרש להקיש כתובת מורחבת');
+      this.toastr.error('אנא הזן כתובת הכוללת עיר רחוב ומספר בית');
     }
     this.checkAddress = true;
     return address.formatted_address;

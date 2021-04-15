@@ -38,7 +38,7 @@ export class UpdateComponent implements OnInit {
       this.shop.addressString = address.formatted_address;
     }
     else {
-      this.toastr.error('נדרש להקיש כתובת מורחבת');
+      this.toastr.error('אנא הזן כתובת הכוללת עיר רחוב ומספר בית');
     }
     this.checkAddress = true;
     return address.formatted_address;
