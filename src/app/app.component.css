@@ -11,3 +11,9 @@ nav a.selected {
     color: var(--my-primary) ;
     border-bottom: 3px solid var(--my-primary) ;
 }
+
+.hp-img {
+  display: block;
+  margin: auto;
+  height: 130vh;
+}
